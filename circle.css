@@ -1,0 +1,324 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.child {
+  width: 25px;
+  height: 25px;
+  background: aquamarine;
+  position: absolute;
+  transform: rotateZ(45deg);
+}
+
+.square-left {
+  top: 48%;
+  left: 47%;
+  animation: squareleft 0.4s ease 1s forwards;
+}
+
+.square-right {
+  top: 48%;
+  right: 47%;
+  animation: squareright 0.4s ease 1s forwards;
+}
+
+.square-small {
+  width: 500px;
+  height: 500px;
+  /* background: burlywood; */
+  position: relative;
+  animation: rotatesquare 0.8s ease-in 1.4s forwards;
+}
+
+.mattruoc {
+  visibility: hidden;
+  width: 280px;
+  height: 280px;
+  background: orange;
+  z-index: 3;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  position: absolute;
+  animation: mattruoc 0.5s ease 5.5s forwards;
+}
+
+.matsau {
+  visibility: hidden;
+  width: 280px;
+  height: 280px;
+  background: lightblue;
+  z-index: 2;
+  border-radius: 50%;
+  transform: rotateY(-180deg);
+  position: absolute;
+  animation: matsau 0.5s ease 5.5s forwards;
+}
+
+.nen {
+  visibility: hidden;
+  width: 280px;
+  height: 280px;
+  background: white;
+  z-index: 1;
+  border-radius: 50%;
+  position: absolute;
+  animation: nen 0s linear 5.5s forwards;
+}
+
+.wrap {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  position: relative;
+  /* background: orange; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html,
+body,
+section {
+  width: 100%;
+  height: 100%;
+}
+
+.circle {
+  display: block;
+  width: 50%;
+  height: 100%;
+  transform-origin: 100% 50%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  visibility: hidden;
+}
+
+/* viá»n */
+
+.wrap-circle3 {
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  z-index: 4;
+  /* top: 25%; */
+  /* left: 41%; */
+}
+
+.wrap-circle3 div:nth-child(3) {
+  width: 164px;
+  height: 324px;
+  background: rgb(255, 255, 255);
+  border-radius: 164px 0 0 164px;
+}
+
+.circle-1-3,
+.circle-2-3 {
+  border-radius: 160px 0 0 160px;
+  /* background: rgb(0, 0, 0); */
+  border: 2px dashed black;
+  border-right: none;
+}
+
+.circle-1-3 {
+  animation: circle1 0s linear 2.2s forwards;
+}
+
+.circle-2-3 {
+  transform: rotateZ(0deg);
+  animation: circle2 0.2s linear 2.4s forwards;
+}
+
+.mask3 {
+  /* background: white; */
+  animation: mask 0.2s linear 2.2s forwards;
+}
+
+/* khá»‘i trÃ²n tÃ­m */
+.wrap-circle {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  /* top: 25%; */
+  /* left: 41%; */
+}
+
+.circle-1,
+.circle-2,
+.mask {
+  border-radius: 125px 0 0 125px;
+  background: violet;
+}
+
+.circle-1 {
+  animation: circle1 0s linear 3.8s forwards;
+}
+
+.circle-2 {
+  transform: rotateZ(0deg);
+  animation: circle2 0.2s linear 4s forwards;
+}
+
+.mask {
+  background: white;
+  animation: mask 0.2s linear 3.8s forwards;
+}
+
+/* khá»‘i trÃ²n xanh */
+
+.wrap-circle1 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  /* top: 29%; */
+  /* left: 47%; */
+}
+
+.circle-1-1,
+.circle-2-1,
+.mask1 {
+  border-radius: 50px 0 0 50px;
+  background: chartreuse;
+}
+
+.circle-1-1 {
+  animation: circle1 0s linear 4.2s forwards;
+}
+
+.circle-2-1 {
+  transform: rotateZ(0deg);
+  animation: circle2 0.2s linear 4.4s forwards;
+}
+
+.mask1 {
+  background: violet;
+  animation: mask 0.2s linear 4.2s forwards;
+}
+
+/* test */
+
+.wrap-circle2 {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  /* top: 29%; */
+  /* left: 47%; */
+}
+
+.circle-1-2,
+.circle-2-2,
+.mask2 {
+  border-radius: 150px 0 0 150px;
+  background: orange;
+}
+
+.circle-1-2 {
+  animation: circle1 0s linear 4.6s forwards;
+}
+
+.circle-2-2 {
+  transform: rotateZ(0deg);
+  animation: circle2 0.2s linear 4.8s forwards;
+}
+
+.mask2 {
+  background: rgb(245, 245, 245);
+  animation: mask 0.2s linear 4.6s forwards;
+}
+
+@keyframes circle2 {
+  form {
+    transform: rotateZ(0deg);
+    visibility: visible;
+  }
+  to {
+    transform: rotateZ(180deg);
+    visibility: visible;
+  }
+}
+
+@keyframes circle1 {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes mask {
+  0% {
+    visibility: visible;
+    transform: rotateZ(0deg);
+    opacity: 1;
+    /* background: inherit; */
+  }
+  100% {
+    /* background: transparent; */
+    opacity: 0;
+    transform: rotateZ(180deg);
+    visibility: hidden;
+  }
+}
+
+/* avata */
+@keyframes nen {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes mattruoc {
+  from {
+    visibility: hidden;
+    transform: rotateY(0deg);
+  }
+  to {
+    visibility: visible;
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes matsau {
+  from {
+    visibility: hidden;
+    transform: rotateY(-180deg);
+  }
+  to {
+    visibility: visible;
+    transform: rotateY(0deg);
+  }
+}
+
+/* ------------square-small---------- */
+
+@keyframes rotatesquare {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(180deg);
+  }
+}
+
+@keyframes squareleft {
+  from {
+    left: 47%;
+  }
+  to {
+    left: -3%;
+  }
+}
+
+@keyframes squareright {
+  from {
+    right: 47%;
+  }
+  to {
+    right: -3%;
+  }
+}
